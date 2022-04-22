@@ -8,13 +8,12 @@ const disableActiveElems = () => {
 };
 
 contents.forEach( elem => {
-  const title = elem.querySelector('.program-line__title');
-  const descr = elem.querySelector('.program-line__descr');
-
-  title.addEventListener('click', () => {
-    // закрываем все табы аккордеона
-    disableActiveElems()
-    
-    descr.classList.toggle('active')
+  elem.addEventListener('click', (e) => {
+    if (e.target.classList.contains('program-line__title')) {
+      // закрываем все табы аккордеона
+      disableActiveElems()
+      
+      elem.querySelector('.program-line__descr').classList.add('active')
+    }
   })
-});
+})
