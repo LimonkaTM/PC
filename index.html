@@ -8,9 +8,17 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Собираем ПК</title>
+    
+    <!-- Подключаем библиотеку seamless-scroll-polyfill - плавный скролл -->
+
+    <script src="https://cdn.jsdelivr.net/npm/seamless-scroll-polyfill@latest/lib/bundle.min.js"></script>
+    
     <!-- defer - подождать пока загрузятся все файлы, а потом выполнит. Он скачивает её, но не запускает
-         async - также поставит файл на скачку, но запустит код сразу -->
-    <script src="./js/script.js" defer></script>
+    async - также поставит файл на скачку, но запустит код сразу -->
+
+    <script src="./js/accordeon.js" defer></script>
+    <script src="./js/modal.js" defer></script>
+    <script src="./js/smoothScroll.js" defer></script>
 </head>
 
 <body>
@@ -21,9 +29,9 @@
             </a>
             <div class="header__menu">
                 <nav class="header__nav block-center-horis">
-                    <a href="#">Чем занимаемся</a>
-                    <a href="#">Процесс работы</a>
-                    <a href="#">Команда</a>
+                    <a href="#work">Чем занимаемся</a>
+                    <a href="#process">Процесс работы</a>
+                    <a href="#command">Команда</a>
                 </nav>
                 <button class="button header__button">Зайти в кабинет</button>
             </div>
@@ -91,7 +99,7 @@
             </div>
         </div>
 
-        <section class="work">
+        <section class="work" id="work">
             <div class="container">
                 <div class="work__wrap">
                     <div class="work__img">
@@ -108,7 +116,7 @@
             </div>
         </section>
 
-        <section class="process">
+        <section class="process" id="process">
             <div class="container">
                 <div class="process__wrap">
                     <div class="process__title block-center-horis">
@@ -145,7 +153,7 @@
             </div>
         </section>
 
-        <section class="program">
+        <section class="program" id="programm">
             <div class="container">
                 <div class="program__image">
                     <img src="./img/program.svg" alt="">
@@ -206,7 +214,7 @@
             </div>
         </section>
 
-        <section class="command">
+        <section class="command" id="command">
             <div class="container">
                 <div class="process__title command__title">
                     <div class="process__img command__img-title">
